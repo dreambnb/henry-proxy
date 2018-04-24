@@ -13,7 +13,7 @@ app.use(bodyParser.json());
 
 
 // serve client files
-app.use('/:roomId', express.static(path.join(__dirname, '/../public')));
+app.use('/rooms/:roomId', express.static(path.join(__dirname, '/../public')));
 
 
 // app.get('/rooms', (res, req)=> {
