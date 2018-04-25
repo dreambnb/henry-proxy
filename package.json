@@ -1,7 +1,7 @@
 {
-  "name": "booking-proxy",
+  "name": "FEC-Mo-Booking-Proxy",
   "version": "1.0.0",
-  "description": "",
+  "description": "Booking (proxy part)",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -12,10 +12,9 @@
     "type": "git",
     "url": "git+https://github.com/HR93-JAMS/FEC-mo-proxy.git"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Moyeong Lee(2000prcs@gmail.com)",
+  "license": "None",
   "dependencies": {
-    "cors": "^2.8.4",
     "express": "^4.16.3",
     "morgan": "^1.9.0"
   }
