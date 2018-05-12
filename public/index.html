@@ -40,37 +40,36 @@
 
   <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
   <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
-  <!-- <script type="text/javascript" src="http://localhost:7777/bundle.min.js"></script> -->
-  <script type="text/javascript" src="https://s3-us-west-1.amazonaws.com/fantasybnb-mo/bundle.min.js"></script>
-  <script type="text/javascript" src="https://s3.amazonaws.com/fantasybnb-imageservice-assets/bundle.min.js"></script>
-  <script type="text/javascript" src="https://s3.amazonaws.com/fantasybnb-static/bundle.min.js"></script>
-  <script type="text/javascript" src="https://s3-us-west-1.amazonaws.com/fantasybnbjs/similiarlistings.js"></script>
+  <script type="text/javascript" src="https://s3-us-west-1.amazonaws.com/dream-bnb-images/bundle.js"></script>
+  <!-- <script type="text/javascript" src="https://s3.amazonaws.com/fantasybnb-imageservice-assets/bundle.min.js"></script> -->
+  <!-- <script type="text/javascript" src="https://s3.amazonaws.com/fantasybnb-static/bundle.min.js"></script> -->
+  <!-- <script type="text/javascript" src="https://s3-us-west-1.amazonaws.com/fantasybnbjs/similiarlistings.js"></script> -->
   <script>
-    let id = (window.location.pathname.split('/rooms')[1]).split('')[1];
+    let id = (window.location.pathname.split('/')[1]).split('')[1];
     ReactDOM.render(
       React.createElement(ImageService, {
         locationId: id
       }),
       document.getElementById('images')
     );
-    ReactDOM.render(
-      React.createElement(Booking, {
-        room: id
-      }),
-      document.getElementById('booking')
-    );
-    ReactDOM.render(
-      React.createElement(Review, {
-        locationId: id
-      }),
-      document.getElementById('reviews')
-    );
-    ReactDOM.render(
-      React.createElement(SimilarListings, {
-        currentListingId: id
-      }),
-      document.getElementById('listings')
-    );
+    // ReactDOM.render(
+    //   React.createElement(Booking, {
+    //     room: id
+    //   }),
+    //   document.getElementById('booking')
+    // );
+    // ReactDOM.render(
+    //   React.createElement(Review, {
+    //     locationId: id
+    //   }),
+    //   document.getElementById('reviews')
+    // );
+    // ReactDOM.render(
+    //   React.createElement(SimilarListings, {
+    //     currentListingId: id
+    //   }),
+    //   document.getElementById('listings')
+    // );
   </script>
 </body>
 

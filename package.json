@@ -1,21 +1,26 @@
 {
-  "name": "FEC-Mo-Booking-Proxy",
+  "name": "Dreambnb-Proxy-Service",
   "version": "1.0.0",
-  "description": "Booking (proxy part)",
+  "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node server/index.js",
-    "server": "nodemon --inspect server/index.js"
+    "start": "nodemon server/index.js",
+    "server": "nodemon --inspect server/index.js",
+    "bombard": "artillery run ./stressTesting/artillery.yml"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/HR93-JAMS/FEC-mo-proxy.git"
   },
-  "author": "Moyeong Lee(2000prcs@gmail.com)",
+  "author": "Henry Chesnutt(t.henry.chesnutt@gmail.com)",
   "license": "ISC",
   "dependencies": {
     "express": "^4.16.3",
+    "isomorphic-fetch": "^2.2.1",
+    "lodash": "^4.17.10",
     "morgan": "^1.9.0",
+    "newrelic": "^4.1.0",
+    "npm": "^6.0.0",
     "sticky-sidebar": "^3.3.1"
   }
 }

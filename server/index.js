@@ -1,25 +1,20 @@
+require('newrelic');
 const express = require('express');
 const morgan = require('morgan');
 const path = require('path');
+
+const { sendRenderedHTML } = require('./render');
+
 const app = express();
 
-const port = process.env.PORT || 8888;
+const PORT = process.env.PORT || 8888;
 
-app.use(morgan('dev'));
-
-const bodyParser = require('body-parser');
-
-app.use(bodyParser.json());
-
+// app.use(morgan('dev'));
 
 // serve client files
-app.use('/rooms/:roomId', express.static(path.join(__dirname, '/../public')));
+app.use('/:roomId', express.static(path.join(__dirname, '/../public')));
+// app.get('/:roomId', sendRenderedHTML);
 
-
-// app.get('/rooms', (res, req)=> {
-
-// });
-
-app.listen(port, () => {
-  console.log(`server running at: http://localhost:${port}`);
+app.listen(PORT, () => {
+  console.log(`server running at: http://localhost:${PORT}`);
 });
